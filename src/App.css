@@ -1,38 +1,129 @@
-.App {
+.app{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.app-header{
+  text-align: center;
+  font-size: 32px;
+}
+.app-body{
+  display: flex;
+  height: calc(100% - 85px);
+  background-color:#EFEFEF;
+}
+.app-footer{
+  height: 100px;
+  background-color:#EFEFEF;
+  font-size: 16px;
+  font-style: italic;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-section{
+  width: 30%;
   display: flex;
   flex-direction: column;
+}
+.app-button{
+    margin: 15px 30px;
+    height: 52px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 14px;
+    border-color: unset;
+    background-color: #72C3DC;
+    border-bottom: 5px solid #2B8EAD;
+    cursor: pointer;
+}
+.app-button:hover{
+  background-color: #2B8EAD;
+  border-bottom-color: #176fa1;
+}
+
+.card-box{
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  height: 33%;
+}
+
+.card{
+  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 72px;
+  color: #FFFFFF;
 }
 
-.App-link {
-  color: #61dafb;
+.color-one{
+  background-color: #2F454E;
+}
+.color-two{
+  background-color: #2B8EAD;
+}
+.color-three{
+background-color: #6F98A8;
+}
+.color-four{
+ background-color:#BFBFBF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .app-header{
+    font-size: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .app-body{
+    height: calc(100% - 25px);
+  }
+  .app-footer{
+    height: 40px;
+    font-size: 12px;
+  }
+  
+  .app-button{
+      margin: 10px;
+      height: 46px;
+      font-size: 12px;
+      border-bottom: 3px solid #2B8EAD;
+  }
+ 
+  .card{
+    font-size: 52px;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .app-header{
+    font-size: 24px;
+  }
+  .app-body{
+    height: calc(100% - 40px);
+  }
+  .app-footer{
+    height: 60px;
+    font-size: 14px;
+  }
+  
+  .app-button{
+      margin: 12px 15px;
+      height: 42px;
+      font-size: 12px;
+      border-bottom: 5px solid #2B8EAD;
+  }
+ 
+  .card{
+    font-size: 68px;
   }
 }
